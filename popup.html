@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merlin Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-section">
+                <button class="icon-button active" id="logo-button">
+                    <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-[26px] w-[26px]">
+                        <path
+                            d="M49.28 0H6.72C3.00864 0 0 3.00864 0 6.72V49.28C0 52.9914 3.00864 56 6.72 56H49.28C52.9914 56 56 52.9914 56 49.28V6.72C56 3.00864 52.9914 0 49.28 0Z"
+                            fill="url(#paint0_radial_10180_61529)"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.8163 14.8959C13.4724 14.2398 14.5361 14.2398 15.1921 14.8959L20.7921 20.4959C21.4482 21.1519 21.4482 22.2157 20.7921 22.8718L15.1921 28.4717C14.5361 29.1278 13.4724 29.1278 12.8163 28.4717C12.1602 27.8156 12.1602 26.7521 12.8163 26.0959L17.2284 21.6838L12.8163 17.2718C12.1602 16.6157 12.1602 15.5519 12.8163 14.8959ZM43.3041 14.8959C43.9602 15.5519 43.9602 16.6157 43.3041 17.2718L38.8922 21.6838L43.3041 26.0959C43.9602 26.7521 43.9602 27.8156 43.3041 28.4717C42.648 29.1278 41.5845 29.1278 40.9284 28.4717L35.3284 22.8718C34.6722 22.2157 34.6722 21.1519 35.3284 20.4959L40.9284 14.8959C41.5845 14.2398 42.648 14.2398 43.3041 14.8959ZM25.2631 25.6802C26.1489 25.4036 27.091 25.897 27.3679 26.7827C27.4308 26.9845 27.5813 27.1424 27.937 27.2688C28.1095 27.3302 28.2838 27.3642 28.4189 27.3815C28.4823 27.3895 28.5308 27.3931 28.5588 27.3949C28.5799 27.3933 28.6146 27.3902 28.6599 27.3839C28.7705 27.3685 28.9233 27.3371 29.0844 27.2773C29.3993 27.1602 29.6677 26.97 29.8251 26.6104C30.197 25.7604 31.1875 25.3728 32.0376 25.7447C32.8877 26.1165 33.2752 27.1071 32.9033 27.9572C32.2768 29.3897 31.1452 30.0954 30.2561 30.4263C29.8151 30.5905 29.415 30.6711 29.1229 30.7117C28.9752 30.7323 28.8505 30.7432 28.756 30.7491C28.7085 30.752 28.6684 30.7538 28.6361 30.7547C28.62 30.7551 28.6059 30.7554 28.594 30.7556L28.5775 30.7558H28.5705H28.5658C28.5649 30.7558 28.5642 30.7558 28.5642 29.0758C28.5642 30.7558 28.5636 30.7558 28.5629 30.7558H28.5615H28.5586H28.5519L28.5362 30.7556C28.5246 30.7554 28.5107 30.7551 28.4946 30.7547C28.4623 30.754 28.4213 30.7524 28.3727 30.7498C28.2757 30.7442 28.1458 30.7338 27.9921 30.7141C27.6897 30.6754 27.2689 30.5975 26.8114 30.4348C25.9071 30.1132 24.6576 29.3751 24.1606 27.7849C23.884 26.8992 24.3775 25.957 25.2631 25.6802Z"
+                            fill="#1E293B"></path>
+                        <defs>
+                            <radialGradient id="paint0_radial_10180_61529" cx="0" cy="0" r="1"
+                                gradientUnits="userSpaceOnUse" gradientTransform="rotate(45) scale(79.196)">
+                                <stop offset="0.576042" stop-color="#E2E8F0"></stop>
+                                <stop offset="0.753125" stop-color="#D5BAEC"></stop>
+                                <stop offset="1" stop-color="#7E22CE"></stop>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </button>
+                <span class="lightning-button">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="res-icon-small">
+                            <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11"></path>
+                        </svg>
+                        100
+                    </span>
+                </span>
+                <button class="upgrade-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="res-icon-small">
+                        <path d="M3 8m0 1a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1z">
+                        </path>
+                        <path d="M12 8l0 13"></path>
+                        <path d="M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7"></path>
+                        <path d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5">
+                        </path>
+                    </svg>
+                    Go Pro!
+                </button>
+            </div>
+            <div class="actions">
+                <button class="icon-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M11 19h-6a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v4"></path>
+                        <path d="M14 14m0 1a1 1 0 0 1 1 -1h5a1 1 0 0 1 1 1v3a1 1 0 0 1 -1 1h-5a1 1 0 0 1 -1 -1z"></path>
+                        <path d="M7 9l4 4"></path>
+                        <path d="M7 12v-3h3"></path>
+                    </svg>
+                </button>
+                <button class="icon-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                        <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                        <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                    </svg>
+                </button>
+                <button class="icon-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 6l6 6l-6 6"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="model-selection">
+            <div class="dropdown-container">
+                <button class="model-button" id="access-web-button">
+                    <i class="fas fa-globe"></i> Access web: <span id="selected-web-model">Turbo</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu" id="web-model-dropdown">
+                    <div class="dropdown-item" data-value="Turbo">Turbo</div>
+                    <div class="dropdown-item" data-value="Pro">Pro</div>
+                    <div class="dropdown-item" data-value="Plus">Plus</div>
+                </div>
+            </div>
+            <div class="dropdown-container">
+                <button class="model-button" id="gpt-model-button">
+                    <i class="fas fa-bolt"></i> <span id="selected-gpt-model">GPT 4o Mini</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu" id="gpt-model-dropdown">
+                    <div class="dropdown-item" data-value="GPT 4o Mini">GPT 4o Mini</div>
+                    <div class="dropdown-item" data-value="GPT 4">GPT 4</div>
+                    <div class="dropdown-item" data-value="GPT 3.5">GPT 3.5</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container" id="chat-container" style="display: none;">
+            <!-- Chat messages will be added here dynamically -->
+        </div>
+
+        <div class="features" id="features-container">
+
+            <button class="feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feature-icon">
+                    <path d="M5 3m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z"></path>
+                    <path d="M9 7l6 0"></path>
+                    <path d="M9 11l6 0"></path>
+                    <path d="M9 15l4 0"></path>
+                </svg>
+                <span class="feature-text">
+                    <span class="text-lg font-medium">Chat with your Documents</span>
+                    <span class="file-types">pdf, doc, pptx, txt</span>
+                </span>
+            </button>
+
+            <button class="feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feature-icon">
+                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                    <path d="M3.6 9h16.8"></path>
+                    <path d="M3.6 15h16.8"></path>
+                    <path d="M11.5 3a17 17 0 0 0 0 18"></path>
+                    <path d="M12.5 3a17 17 0 0 1 0 18"></path>
+                </svg>
+                <span class="feature-text">
+                    <span class="text-lg font-medium">Chat with this Webpage</span>
+                </span>
+            </button>
+
+            <button class="feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feature-icon">
+                    <path d="M6 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z"></path>
+                    <path d="M12 2v2"></path>
+                    <path d="M9 12v9"></path>
+                    <path d="M15 12v9"></path>
+                    <path d="M5 16l4 -2"></path>
+                    <path d="M15 14l4 2"></path>
+                    <path d="M9 18h6"></path>
+                    <path d="M10 8v.01"></path>
+                    <path d="M14 8v.01"></path>
+                </svg>
+                <span class="feature-text">
+                    <span class="text-lg font-medium">Chatbots</span>
+                </span>
+            </button>
+
+            <button class="feature-item">
+                <div class="blue-dot"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feature-icon">
+                    <path d="M15 8h.01"></path>
+                    <path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z"></path>
+                    <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5"></path>
+                    <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3"></path>
+                </svg>
+                <span class="feature-text">
+                    <span class="text-lg font-medium">Generate Images</span>
+                </span>
+            </button>
+
+            <button class="feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feature-icon">
+                    <path d="M20 11a8.1 8.1 0 0 0 -6.986 -6.918a8.095 8.095 0 0 0 -8.019 3.918"></path>
+                    <path d="M4 13a8.1 8.1 0 0 0 15 3"></path>
+                    <path d="M19 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                    <path d="M5 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                </svg>
+                <span class="feature-text">
+                    <span class="text-lg font-medium">Code Interpreter</span>
+                    <span class="data-analysis">Perform Data Analysis</span>
+                </span>
+            </button>
+        </div>
+
+        <div class="chat-input">
+            <div class="chat-input-container">
+                <button class="icon-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 10v11l-5 -3l-5 3v-11a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3z"></path>
+                        <path d="M11 3h5a3 3 0 0 1 3 3v11"></path>
+                    </svg>
+                </button>
+                <div class="relative">
+                    <input type="text" placeholder="">
+                    <div class="placeholder">Start Chatting Now</div>
+                </div>
+                <div class="input-actions">
+                    <button class="icon-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 8h.01"></path>
+                            <path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z">
+                            </path>
+                            <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5"></path>
+                            <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <button class="send-button" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 14l11 -11"></path>
+                    <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div class="footer">
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
