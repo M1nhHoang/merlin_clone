@@ -24,6 +24,124 @@
     --border-zinc-700: #3f3f46;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     --border-radius: 12px;
+    --text-color: #27272a;
+    --text-secondary: #3f3f46;
+    --text-tertiary: #52525b;
+    --text-placeholder: #71717a;
+}
+
+/* Dark theme variables */
+.dark-theme {
+    --zinc-50: #18181b;
+    --zinc-100: #27272a;
+    --zinc-200: #3f3f46;
+    --zinc-700: #d4d4d8;
+    --zinc-800: #e4e4e7;
+    --border-zinc-200: #3f3f46;
+    --border-zinc-700: #71717a;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    --text-color: #e4e4e7;
+    --text-secondary: #a1a1aa;
+    --text-tertiary: #d4d4d8;
+    --text-placeholder: #a1a1aa;
+}
+
+/* Additional dark theme specific styles */
+.dark-theme .icon-button {
+    color: var(--zinc-700);
+}
+
+.dark-theme .feature-item {
+    border-color: var(--border-zinc-200);
+}
+
+.dark-theme .chat-input-container {
+    background-color: var(--zinc-200);
+}
+
+.dark-theme .placeholder {
+    color: var(--text-placeholder);
+}
+
+.dark-theme .model-button {
+    background-color: var(--zinc-100);
+    color: var(--zinc-800);
+    border-color: var(--border-zinc-200);
+}
+
+.dark-theme .dropdown-item {
+    color: var(--text-color);
+}
+
+.dark-theme .assistant-message {
+    background-color: var(--zinc-200);
+    color: var(--text-color);
+}
+
+.dark-theme .file-types,
+.dark-theme .feature-text {
+    color: var(--text-tertiary);
+}
+
+.dark-theme .lightning-button span {
+    color: var(--cornblue-100);
+}
+
+.dark-theme .lightning-button svg {
+    color: var(--cornblue-100);
+}
+
+/* Extension specific styles for Chrome */
+.extension-body {
+    color: var(--text-color);
+    background-color: var(--zinc-50);
+    transition: all 0.3s ease;
+}
+
+.dark-theme svg {
+    stroke: var(--zinc-700);
+}
+
+.dark-theme .chat-input input {
+    color: var(--text-color);
+}
+
+.dark-theme .feature-icon svg {
+    stroke: var(--zinc-700);
+}
+
+.dark-theme .feature-text .text-lg {
+    color: var(--text-color);
+}
+
+.dark-theme .dropdown-menu {
+    background-color: var(--zinc-100);
+    border-color: var(--border-zinc-200);
+}
+
+/* Enhanced text visibility for dark mode */
+.dark-theme .model-button span {
+    color: var(--text-color);
+}
+
+.dark-theme .upgrade-button {
+    color: white;
+}
+
+.dark-theme .feature-item:hover {
+    background-color: var(--zinc-700);
+    opacity: 1;
+}
+
+.dark-theme .feature-item:hover .feature-text .text-lg,
+.dark-theme .feature-item:hover .feature-icon svg,
+.dark-theme .feature-item:hover .file-types {
+    color: var(--zinc-50);
+}
+
+.dark-theme .dropdown-item:hover {
+    background-color: var(--zinc-200);
+    color: var(--zinc-50);
 }
 
 * {
@@ -56,7 +174,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px;
+    padding: 8px 12px;
     border-bottom: 1px solid var(--border-zinc-200);
     z-index: 50;
     background-color: var(--zinc-50);
@@ -65,7 +183,8 @@ body {
 .logo-section {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
+    flex: 1;
 }
 
 .icon-button {
@@ -77,10 +196,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px 8px;
+    padding: 5px;
     border-radius: 6px;
-    height: 36px;
-    width: 36px;
+    height: 32px;
+    width: 32px;
+    min-width: 32px;
 }
 
 .icon-button:hover {
@@ -96,46 +216,56 @@ body {
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    gap: 2px;
+    gap: 4px;
     border-radius: 20px;
-    padding: 1px 1px;
-    margin-left: 12px;
+    padding: 3px 8px;
+    margin-left: 2px;
     border: 1px solid var(--cornblue-600);
+    height: 28px;
 }
 
 .lightning-button span {
     display: flex;
     align-items: center;
-    padding: 1px;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 500;
     color: var(--cornblue-700);
 }
 
 .lightning-button svg {
     color: var(--cornblue-700);
+    min-width: 16px;
 }
 
 .upgrade-button {
     background: linear-gradient(to right, var(--primary-color), var(--cornblue-600));
     color: white;
     border: none;
-    padding: 2px 8px;
+    padding: 3px 10px;
     border-radius: 20px;
     cursor: pointer;
-    font-weight: normal;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 13px;
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 4px;
+    height: 28px;
+    margin-left: 4px;
+    white-space: nowrap;
 }
 
 .upgrade-button svg {
     height: 16px;
     width: 16px;
+    min-width: 16px;
 }
 
 .actions {
     display: flex;
-    gap: 12px;
+    gap: 8px;
+    align-items: center;
+    margin-left: 8px;
 }
 
 /* Model Selection */
@@ -392,7 +522,6 @@ body {
 
 .chat-input input {
     flex: 1;
-    padding: 8px;
     border: none;
     background-color: transparent;
     outline: none;
@@ -458,4 +587,37 @@ body {
 
 .footer-right {
     justify-content: flex-end;
+}
+
+/* Additional styles for chat messages in dark mode */
+.dark-theme .chat-container {
+    background-color: var(--zinc-50);
+}
+
+.dark-theme .user-message {
+    background-color: var(--cornblue-700);
+    color: white;
+}
+
+.dark-theme .chat-input {
+    background-color: var(--zinc-100);
+    border-top-color: var(--border-zinc-200);
+}
+
+.dark-theme .send-button {
+    color: var(--zinc-700);
+}
+
+.dark-theme .send-button:hover:not(:disabled) {
+    background-color: var(--zinc-200);
+}
+
+/* Fix feature text and special formatting */
+.text-lg {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.dark-theme input::placeholder {
+    color: var(--text-placeholder);
 }
